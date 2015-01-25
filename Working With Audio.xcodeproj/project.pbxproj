@@ -13,6 +13,9 @@
 		A756832A1A747CD300322006 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A75683291A747CD300322006 /* Images.xcassets */; };
 		A756832D1A747CD300322006 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A756832B1A747CD300322006 /* LaunchScreen.xib */; };
 		A75683391A747CD300322006 /* Working_With_AudioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75683381A747CD300322006 /* Working_With_AudioTests.swift */; };
+		A75683451A747DBC00322006 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A75683441A747DBC00322006 /* AVFoundation.framework */; };
+		A75683471A747FBC00322006 /* prettyboy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A75683461A747FBC00322006 /* prettyboy.mp3 */; };
+		A75683491A748CF400322006 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = A75683481A748CF400322006 /* background.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		A75683321A747CD300322006 /* Working With AudioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Working With AudioTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A75683371A747CD300322006 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A75683381A747CD300322006 /* Working_With_AudioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Working_With_AudioTests.swift; sourceTree = "<group>"; };
+		A75683441A747DBC00322006 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		A75683461A747FBC00322006 /* prettyboy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = prettyboy.mp3; sourceTree = "<group>"; };
+		A75683481A748CF400322006 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A75683451A747DBC00322006 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +66,7 @@
 		A75683141A747CD300322006 = {
 			isa = PBXGroup;
 			children = (
+				A75683441A747DBC00322006 /* AVFoundation.framework */,
 				A756831F1A747CD300322006 /* Working With Audio */,
 				A75683351A747CD300322006 /* Working With AudioTests */,
 				A756831E1A747CD300322006 /* Products */,
@@ -80,6 +88,8 @@
 				A75683221A747CD300322006 /* AppDelegate.swift */,
 				A75683241A747CD300322006 /* ViewController.swift */,
 				A75683261A747CD300322006 /* Main.storyboard */,
+				A75683461A747FBC00322006 /* prettyboy.mp3 */,
+				A75683481A748CF400322006 /* background.png */,
 				A75683291A747CD300322006 /* Images.xcassets */,
 				A756832B1A747CD300322006 /* LaunchScreen.xib */,
 				A75683201A747CD300322006 /* Supporting Files */,
@@ -193,6 +203,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A75683281A747CD300322006 /* Main.storyboard in Resources */,
+				A75683491A748CF400322006 /* background.png in Resources */,
+				A75683471A747FBC00322006 /* prettyboy.mp3 in Resources */,
 				A756832D1A747CD300322006 /* LaunchScreen.xib in Resources */,
 				A756832A1A747CD300322006 /* Images.xcassets in Resources */,
 			);

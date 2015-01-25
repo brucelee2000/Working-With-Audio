@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Working_With_Audio" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +16,82 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wD6-tz-0sX">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="zu4-1h-sRd"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Music Track" id="G6E-Zn-bRI">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="0Xb-3O-nou">
+                                            <connections>
+                                                <action selector="playButtonPressed:" destination="vXZ-lx-hvc" id="OIp-1t-lSK"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zuf-UL-T7j">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="tey-YK-6sh"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem systemItem="pause" id="tuV-eJ-vzy">
+                                        <connections>
+                                            <action selector="pauseButtonPressed:" destination="vXZ-lx-hvc" id="hN4-Qy-JLo"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="LqJ-xI-GXY"/>
+                                    <barButtonItem title="Stop" id="n8C-lc-cjf">
+                                        <connections>
+                                            <action selector="stopButtonPressed:" destination="vXZ-lx-hvc" id="teb-D9-pHv"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="7oa-Kx-KjY">
+                                <rect key="frame" x="55" y="483" width="490" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="wIZ-y3-TZR"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="changeVolume:" destination="vXZ-lx-hvc" eventType="valueChanged" id="gmB-g4-GBB"/>
+                                </connections>
+                            </slider>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="77k-R9-zIh">
+                                <rect key="frame" x="16" y="81" width="568" height="343"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="343" id="3XU-La-FPc"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wD6-tz-0sX" firstAttribute="centerX" secondItem="77k-R9-zIh" secondAttribute="centerX" id="B7U-BR-Ptx"/>
+                            <constraint firstAttribute="trailing" secondItem="zuf-UL-T7j" secondAttribute="trailing" id="KaB-dW-Vab"/>
+                            <constraint firstItem="wD6-tz-0sX" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="MNF-BD-h5e"/>
+                            <constraint firstItem="wD6-tz-0sX" firstAttribute="leading" secondItem="zuf-UL-T7j" secondAttribute="leading" id="Nj9-Iy-FRt"/>
+                            <constraint firstItem="77k-R9-zIh" firstAttribute="top" secondItem="wD6-tz-0sX" secondAttribute="bottom" constant="17" id="PR8-U1-niL"/>
+                            <constraint firstItem="zuf-UL-T7j" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="dRe-pp-KzM"/>
+                            <constraint firstItem="wD6-tz-0sX" firstAttribute="trailing" secondItem="zuf-UL-T7j" secondAttribute="trailing" id="df9-LC-nlX"/>
+                            <constraint firstItem="zuf-UL-T7j" firstAttribute="centerX" secondItem="7oa-Kx-KjY" secondAttribute="centerX" id="gTA-QF-mlx"/>
+                            <constraint firstItem="wD6-tz-0sX" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="gb9-c1-hHs"/>
+                            <constraint firstItem="77k-R9-zIh" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="ua4-aJ-Uxf"/>
+                            <constraint firstItem="zuf-UL-T7j" firstAttribute="top" secondItem="7oa-Kx-KjY" secondAttribute="bottom" constant="43" id="vgh-Pi-xjh"/>
+                            <constraint firstItem="7oa-Kx-KjY" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="41" id="zzd-7d-EDs"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="volumeSlider" destination="7oa-Kx-KjY" id="qmC-hz-4y5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="background.png" width="2509" height="1673"/>
+    </resources>
 </document>
